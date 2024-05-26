@@ -3,36 +3,44 @@
   <head>
     <title>Rock Paper Scissors</title>
 
-    <style>
-      body{
-        background-color: rgb(25, 25, 25);
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
+
   </head>
 
   <body>
 
-    <button id="rock" onclick="
+    <h3> Rock Paper Scissors </h3>
+
+    <button class="icon-button" onclick="
     playGame('rock')
     
-    ">Rock</button>
+    "><img src="images/rock-emoji.png" alt="" class="icon"></button>
 
-    <button id="paper" onclick="
+    <button class="icon-button" onclick="
     playGame('paper')
     
-    ">Paper</button>
+    "><img src="images/paper-emoji.png" alt="" class="icon"></button>
 
-    <button id="scissors" onclick="
+    <button class="icon-button" onclick="
     playGame('scissors')
     
-    ">Scissors</button>
+    "><img src="images/scissors-emoji.png" alt="" class="icon"></button>
+
+
+
+    <p class="js-moves"></p>
+
+    <p class="res"></p>
+
+    <h4>Score</h4>
+    <p class="result"></p>
+
+
 
     <p></p>
-    <button onclick=" 
+    <button id = "reset-button" onclick=" 
       resetScore()
     ">Reset Score</button>
-
-    
     
 
     <script src="/script.js"></script>

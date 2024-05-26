@@ -83,12 +83,14 @@ function playGame(userMove){
   
  localStorage.setItem('score',JSON.stringify(score));
 
-  
+  document.querySelector('.js-moves').innerHTML = 
+  `You <img class = "icon-button icon"src="/images/${userMove}-emoji.png"> <img class = "icon-button icon"src="/images/${opp}-emoji.png"> Computer`
 
-  alert(`You chose ${userMove}, Computer chose ${opp}
-    ${result}
-    Wins:${score.wins},Losses:${score.losses},Ties:${score.ties}
-  `)
+  document.querySelector('.res').innerHTML =
+  `${result}`
+
+  displayResult();
+
 
 }
 
@@ -101,6 +103,12 @@ function resetScore(){
   score.ties = 0;
   localStorage.removeItem('score');
 
+  displayResult();
+
   console.log(score)
+}
+
+function displayResult(){
+  document.querySelector('.result').innerHTML = `Wins:${score.wins},Losses:${score.losses},Ties:${score.ties}`
 }
 
